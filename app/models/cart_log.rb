@@ -1,0 +1,2 @@
+class CartLog < ApplicationRecord
+end

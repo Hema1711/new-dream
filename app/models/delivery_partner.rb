@@ -1,0 +1,2 @@
+class DeliveryPartner < ApplicationRecord
+end

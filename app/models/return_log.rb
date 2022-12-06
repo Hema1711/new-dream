@@ -1,0 +1,2 @@
+class ReturnLog < ApplicationRecord
+end
