@@ -122,6 +122,7 @@
                       <div class="row">
                         <div class="col-sm-12">
                           <a href="/users/edit_user" class="btn btn-info " target="__blank" href="#">Edit</a>
+                          <%= button_to 'Logout', '/auth/logout',class:"btn btn-secondary", method: :get, data:{turbo: "false"} %>
                         </div>
                       </div>
                     </div>

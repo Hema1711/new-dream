@@ -31,14 +31,14 @@ body [
                   .form-group
                     label.lable-class[for="first_name"]  First Name
                     = form.text_field :first_name, class:"box-class", placeholder:"Enter First Name", id:"first_name", data: {"user-target" => "first_name" , action: "focusout->user#first_name_validation" }
-                .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+                .col-xl-6user_id.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="last_name"]  Last Name
                     = form.text_field :last_name, class:"box-class", placeholder:"Enter Last Name", id:"last_name", data: {"user-target" => "last_name" , action: "focusout->user#last_name_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="phone"]  Phone Number
-                    = form.text_field :phone_number, class:"box-class", placeholder:"Enter Phone Number", id:"phone", data: {"user-target" => "phone_number" , action: "focusout->user#phone_validation" }
+                    = form.number_field :phone_number, class:"box-class", placeholder:"Enter Phone Number", id:"phone", data: {"user-target" => "phone_number" , action: "focusout->user#phone_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                  .form-group
                     label.lable-class[for="email"]  Email
@@ -50,19 +50,19 @@ body [
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="file"] State
-                    = form.text_field :state_id, class:"box-class", placeholder:"Enter State", id:"state", data: {"user-target" => "state" , action: "focusout->user#state_validation" }
+                    = form.number_field :state_id, class:"box-class", placeholder:"Enter State", id:"state", data: {"user-target" => "state" , action: "focusout->user#state_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="file"]  City
-                    = form.text_field :city_village_id, class:"box-class", placeholder:"Enter City", id:"city", data: {"user-target" => "city" , action: "focusout->user#city_validation" }
+                    = form.number_field :city_village_id, class:"box-class", placeholder:"Enter City", id:"city", data: {"user-target" => "city" , action: "focusout->user#city_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="file"] Country
-                    = form.text_field :country_id, class:"box-class", placeholder:"Enter Country", id:"country", data: {"user-target" => "country" , action: "focusout->user#country_validation" }
+                    = form.number_field :country_id, class:"box-class", placeholder:"Enter Country", id:"country", data: {"user-target" => "country" , action: "focusout->user#country_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="file"]  Zip Code
-                    = form.text_field :pincode, class:"box-class", placeholder:"Enter Zipcode Name", id:"zipcode", data: {"user-target" => "zipcode" , action: "focusout->user#zipcode_validation" }
+                    = form.number_field :pincode, class:"box-class", placeholder:"Enter Zipcode Name", id:"zipcode", data: {"user-target" => "zipcode" , action: "focusout->user#zipcode_validation" }
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
                   .form-group
                     label.lable-class[for="file"]  Image
@@ -74,4 +74,4 @@ body [
                         = form.submit class:'create btn btn-outline-success' , data: {action: 'click-> user#create_user'}
                     .right_align
                       button.btn.btn-outline-dark
-                        a.hyper href="http://localhost:3000"  Cancel 
+                        a.hyper href="/users/get_user"  Cancel 

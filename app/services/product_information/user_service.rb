@@ -10,9 +10,9 @@ module ProductInformation
 			return user_info
 		end
 
-		def self.edit_user(user_id)
-			data = User.find(user_id)
-		end
+		# def self.edit_user(14)
+		# 	user_info = User.find(14)
+		# end
 
 		def self.update_user(user_id, params)
 			data = User.find(user_id)

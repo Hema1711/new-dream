@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   root 'products#index'
    
+  get '/auth/auth0/callback' => 'auth0#callback'
+  get '/auth/failure' => 'auth0#failure'
+  get '/auth/logout' => 'auth0#logout'
+
   #---------------------------------product--------------------------------------------------------
        get "/products/get_product", to: "products#index" , as: :index 
        get "/products/all_product", to: "products#product_index", as: :product_index
