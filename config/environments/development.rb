@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require 'net/smtp'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -67,4 +68,33 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  config.action_mailer.delivery_method = :letter_opener
+
+
+  
+  # config.action_mailer.delivery_method = :smtp
+  # host = 'localhost:3000' #replace with your own url
+  # config.action_mailer.default_url_options = { host: host }
+
+  # SMTP settings for gmail
+#   config.action_mailer.smtp_settings = {
+#   :address              => "smtp.gmail.com",
+#   :port                 => 587,
+#   :user_name            => "manjusathyam842@gmail.com",
+#   :password             => "Findme@123!",
+#   :authentication       => :plain,
+#   :enable_starttls_auto => true
+# }
+#   config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+
+
+  ActionMailer::Base.smtp_settings = {
+  :user_name => 'Rails.application.credentials.name', # This is the string literal 'apikey', NOT the ID of your API key
+  :password => ' Rails.application.credentials.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', # This is the secret sendgrid API key which was issued during API key creation
+  :domain => 'sigmatconsultancy@gmail.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 end

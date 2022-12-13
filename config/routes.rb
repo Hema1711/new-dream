@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get '/auth/logout' => 'auth0#logout'
 
   #---------------------------------product--------------------------------------------------------
-       get "/products/get_product", to: "products#index" , as: :index 
-       get "/products/all_product", to: "products#product_index", as: :product_index
+      get "/products/get_product", to: "products#index" , as: :index 
+      get "/products/all_product", to: "products#product_index", as: :product_index
      get "products/new_product", to: "products#new_product"
      get "products/edit_product", to: "products#edit_product"
      put "products/update_product", to: "products#update_product"
@@ -34,4 +34,27 @@ Rails.application.routes.draw do
      put "carts/update_cart", to:  "carts#update_cart"
      post "carts/create_cart", to:  "carts#create_cart"
      delete "carts/delete_cart", to:  "carts#delete_cart"
+
+   #---------------------------------------order----------------------------------------------------------
+
+   get "orders/get_order", to: "orders#get_order"
+   get "orders/new_order", to:  "orders#new_order"
+   get "orders/edit_order", to:  "orders#edit_order"
+   put "orders/update_order", to:  "orders#update_order"
+   post "/orders/create_order", to:  "orders#create_order"
+   delete "orders/delete_order", to:  "orders#delete_order"
+
+   #---------------------------------------payment----------------------------------------------------------
+
+   get "payments/get_payment", to: "payments#get_payment"
+   get "payments/new_payment", to:  "payments#new_payment"
+   get "payments/edit_payment", to:  "payments#edit_payment"
+   put "payments/update_payment", to:  "payments#update_payment"
+   post "payments/create_payment", to:  "payments#create_payment"
+   delete "payments/delete_payment", to:  "payments#delete_payment"
+
+   #-------------------------------------delivery-----------------------------------------------------
+
+   # get "deliveries/get_delivery", to: "deliveries#get_delivery"
+   # post "deliveries/create_delivery", to: "deliveries#create_delivery"
 end
