@@ -6,3 +6,7 @@ class OrderMailer < ApplicationMailer
     mail(to: "manjusathyam842@gmail.com", subject: "Welcome to My Awesome Site")
   end
 end
+
+
+
+
