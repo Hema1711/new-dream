@@ -30,9 +30,9 @@ ActiveAdmin.register User do
   #   column :language
   # end
 
-  # filter :first_name
-  # filter :email
+  filter :first_name
+  filter :email
 
   # controller { actions :all, except: [:destroy] }
- 
+
 end

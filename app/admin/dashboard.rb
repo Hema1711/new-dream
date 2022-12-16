@@ -10,6 +10,17 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+  panel "All Portfolios" do
+    ul do
+      User.all.map do |user|
+        li AdminUser
+        li Category
+        li Product
+        li Order
+      end
+    end
+  end
+  
     # section "Latest comments" do
      
     # end
@@ -35,5 +46,4 @@ ActiveAdmin.register_page "Dashboard" do
     # end
   end # content
 
-  
 end

@@ -55,6 +55,6 @@ Rails.application.routes.draw do
 
    #-------------------------------------delivery-----------------------------------------------------
 
-   # get "deliveries/get_delivery", to: "deliveries#get_delivery"
-   # post "deliveries/create_delivery", to: "deliveries#create_delivery"
+   get "deliveries/get_delivery", to: "deliveries#get_delivery"
+   post "deliveries/create_delivery", to: "deliveries#create_delivery"
 end

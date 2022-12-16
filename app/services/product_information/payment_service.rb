@@ -23,6 +23,7 @@ module ProductInformation
 		end
 
 		def self.create_payment(params)
+			byebug
 			data = Payment.create(params)
 		end
 

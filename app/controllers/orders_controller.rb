@@ -33,6 +33,9 @@ class OrdersController < ApplicationController
 		byebug
 		params.require(:order).permit(:user_id, :total, :cart_id, :payment_id, :quantity)
 	end
+
+
+
 end
 
 

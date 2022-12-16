@@ -19,7 +19,6 @@ class CartsController < ApplicationController
 	end
 
 	def create_cart
-		byebug
 		@data = ProductInformation::CartService.create_cart(cart_params)
 		head :no_content
 	end

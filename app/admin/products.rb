@@ -14,5 +14,13 @@ ActiveAdmin.register Product do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
+
+  # filter :product_name, :as => :check_boxes
+    filter :product_name
+
+  action_item :Addproducts do
+    link_to "Approve", "/admin/products/"
+  end
+
 end

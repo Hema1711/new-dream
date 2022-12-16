@@ -27,10 +27,8 @@ module ProductInformation
 			@order = Order.new(order_params)
 			if @order.save
 				OrderMailer.with(order: @order).welcome_email.deliver_now
-				# render json: { message: "order success" }
 				puts "Order successfully created"
 			else
-				# render json: { message: "order not success" }
 				puts "order not created"
 			end
 		end

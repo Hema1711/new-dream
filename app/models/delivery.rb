@@ -1,5 +1,5 @@
 class Delivery < ApplicationRecord
-    has_one :delivery_log
+	has_one :delivery_log
 	belongs_to :delivery_partner, optional: true
 	has_many :delivery_statuses
 	has_one :cancellation
