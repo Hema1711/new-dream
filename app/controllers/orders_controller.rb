@@ -30,12 +30,8 @@ class OrdersController < ApplicationController
 	private
 	
 	def order_params
-		byebug
 		params.require(:order).permit(:user_id, :total, :cart_id, :payment_id, :quantity)
 	end
-
-
-
 end
 
 
